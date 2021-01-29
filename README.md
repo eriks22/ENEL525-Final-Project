@@ -157,6 +157,10 @@ Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
+$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$
+$\forall x \in X, \quad \exists y \leq \epsilon$
+
 Where <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = error">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{b} = bias">, and <img src="https://render.githubusercontent.com/render/math?math=\Large \alpha = learning\ rate">
 
 Step 1: Propagate inputs through the network
