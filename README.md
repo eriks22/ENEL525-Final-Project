@@ -11,27 +11,9 @@ Final Project for ENEL525 Machine Learning for Engineers taken during Fall 2020
 
 # Introduction
 
-### The COVID-19 pandemic has defined an unprecedented set of problems for researchers and scientists to solve. In this array of problems, the task of testing and correctly identifying positive and negative cases of COVID-19 has been of utmost
-
-### importance.
-
-### This project aims to use the available technologies and techniques of machine
-
-### learning to develop a network that can identify positive COVID-19 cases. This is done
-
-### using a publicly-available dataset containing various measures of blood markers, ages,
-
-### and SARS-CoV-2 test results of different patients. A summary of the information
-
-### provided and the data given is has been presented in follows in Table 1.
-
-### Table 1: Blood Count Information Input Data
-
-### The task at hand is to design, configure, train, and test a machine learning
-
-### architecture that can accurately and reliably predict positive COVID-19 cases using the
-
-### blood count information as input data.
+### The COVID-19 pandemic has defined an unprecedented set of problems for researchers and scientists to solve. In this array of problems, the task of testing and correctly identifying positive and negative cases of COVID-19 has been of utmost importance. 
+### This project aims to use the available technologies and techniques of machine learning to develop a network that can identify positive COVID-19 cases. This is done using a publicly-available dataset containing various measures of blood markers, ages, and SARS-CoV-2 test results of different patients. A summary of the information provided and the data given is has been presented in follows in Table 1. 
+## Table 1: Blood Count Information Input Data
 
 ```
 Column Description Data type
@@ -62,45 +44,14 @@ Integer
 16 red blood cell distribution width (RBCDW). Continuous
 ```
 
+### The task at hand is to design, configure, train, and test a machine learning architecture that can accurately and reliably predict positive COVID-19 cases using the blood count information as input data.
+
 # Methodology
 
-### The inputs of the problem include all columns in the given dataset. The inputs for the
+### The inputs of the problem include all columns in the given dataset. The inputs for the network are the same as above but will exclude column 0 (the row index of the original dataset) as this data is independent of the blood data or test results.
+### All the blood count data have been standardized to have a mean of 0 and a standard deviation of 1. Since this data is already appropriate to use to train a neural network, no cleaning of this data will be done. Since the ages are delivered as percentiles (ranging from 2-28), this input would proportionally have a much larger effect on the network and potentially skew results. Therefore, I chose to scale the age data between values of 0 and 1 to restrict the values into a range that would affect the weights less.
 
-### network are the same as above but will exclude column 0 (the row index of the original
-
-### dataset) as this data is independent of the blood data or test results.
-
-### All the blood count data have been standardized to have a mean of 0 and a standard
-
-### deviation of 1. Since this data is already appropriate to use to train a neural network, no
-
-### cleaning of this data will be done. Since the ages are delivered as percentiles (ranging
-
-### from 2-28), this input would proportionally have a much larger effect on the network and
-
-### potentially skew results. Therefore, I chose to scale the age data between values of 0
-
-### and 1 to restrict the values into a range that would affect the weights less.
-
-### Input data and corresponding value ranges:
-
-### The target of the project is to correctly identify positive and negative cases, so the
-
-### output of the network relies on a binary decision. As mentioned in chapter 22 of the
-
-### course textbook[1], it can be more accurate to create two dedicated output neurons for
-
-### each case (positive or negative) so two neurons in the output layer were used.
-
-### The output layer could then be interpreted as such:
-
-## Network Design
-
-### To design the network I first had to decide on a learning algorithm. As the data provided
-
-### was continuous, and therefore would cause varying levels of precision and error in the
-
-### results, I decided that backpropagation would be the best algorithm to use.
+### **Input data and corresponding value ranges:**
 
 ```
 Input Description Data type Input Values
@@ -120,6 +71,11 @@ Input Description Data type Input Values
 14 monocytes Continuous (- 1 , 1 )
 15 red blood cell distribution width (RBCDW). Continuous (- 1 , 1 )
 ```
+
+### The target of the project is to correctly identify positive and negative cases, so the output of the network relies on a binary decision. As mentioned in chapter 22 of the course textbook[1], it can be more accurate to create two dedicated output neurons for each case (positive or negative) so two neurons in the output layer were used.
+
+### The output layer could then be interpreted as such:
+
 ```
 Output Layer Neuron
 1 2
@@ -127,35 +83,14 @@ Positive 0 1
 Negative 1 0
 ```
 
-### Following was the network architecture, namely designing the hidden layers and the
+## Network Design
 
-### transfer functions. The network design was completed by using the 15 inputs on the
+### To design the network I first had to decide on a learning algorithm. As the data provided was continuous, and therefore would cause varying levels of precision and error in the results, I decided that backpropagation would be the best algorithm to use.
+### Following was the network architecture, namely designing the hidden layers and the transfer functions. The network design was completed by using the 15 inputs on the input layer and 2 outputs on the output layer. I determined that the use of two hidden layers would be simple to implement, allow me to dynamically change the number of neurons in each layer, and have a level of complexity in the network that was fitting for the problem.
 
-### input layer and 2 outputs on the output layer. I determined that the use of two hidden
+### In the various configurations I used for the network, it appeared as though having 6 neurons provided a reasonable amount of complexity for the problem. It also helped avoid too many local minima in finding the minimum mean-squared-error when repeatedly iterating through the training data.
 
-### layers would be simple to implement, allow me to dynamically change the number of
-
-### neurons in each layer, and have a level of complexity in the network that was fitting for
-
-### the problem.
-
-### In the various configurations I used for the network, it appeared as though having 6
-
-### neurons provided a reasonable amount of complexity for the problem. It also helped
-
-### avoid too many local minima in finding the minimum mean-squared-error when
-
-### repeatedly iterating through the training data.
-
-### Finally, the transfer functions needed to be chosen. In backpropagation, the hidden
-
-### layers function best if a non-linear function is used. The two options suggested in
-
-### chapter 22 of the textbook [1] were the logsig and tansig functions. I decided to use tan-
-
-### sigmoid function for the hidden and output layers as it allows a
-
-### Formula 1: Hyperbolic tangent sigmoid transfer function:
+### Finally, the transfer functions needed to be chosen. In backpropagation, the hidden layers function best if a non-linear function is used. The two options suggested in chapter 22 of the textbook [1] were the logsig and tansig functions. I decided to use tan-sigmoid function for the hidden and output layers as it allows a Formula 1: Hyperbolic tangent sigmoid transfer function:
 
 ### 푡푎푛푠푖푔(푛)=
 
@@ -235,9 +170,7 @@ Negative 1 0
 
 ### 휕푛⃑⃑푚
 
-### Using these equations we can implement the back-propagation algorithm used for this
-
-### project.
+### Using these equations we can implement the back-propagation algorithm used for this project.
 
 ## Training and Testing Scheme
 
