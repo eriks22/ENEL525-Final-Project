@@ -162,7 +162,7 @@ Where <img src="https://render.githubusercontent.com/render/math?math=\Large \ov
 Step 1: Propagate inputs through the network
 <img src="https://render.githubusercontent.com/render/math?math=\Large {\overset{}{a}}^{m + 1} = tansig\left( {\overset{}{W}}^{m + 1}p + {\overset{}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ ">
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = {\overset{}{a}}^{L}">
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{\char”20D7}{a} = {\overset{}{a}}^{L}">
 
 <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = \ t - a">
 
