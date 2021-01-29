@@ -90,7 +90,7 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-  | Neuron 1 |  Neuron 2
+. | Neuron 1 |  Neuron 2
 ------------ | ------------- | -------------
 Positive | 0 | 1
 Negative | 1 | 0
@@ -196,8 +196,7 @@ Final results:
 
 **Figure 5: All Output vs Testing and Training Data**
 
-![](media/image8.png){width="4.3480621172353455in"
-height="1.5748031496062993in"}
+![](media/image8.png)
 
 **Figure 6: Output vs. Test Data**
 
@@ -221,7 +220,7 @@ potentially the error could be reduced.
 
 As well, the use of backpropagation may have been inappropriate for this
 task. Other methods, such as Decision Tree or Random Forest modelling
-^\[2\]^ may be more suitable for the problem. These methods, however,
+\[2\] may be more suitable for the problem. These methods, however,
 were beyond the scope of this course.
 
 Regardless of the results of the network, valuable skills were learned
