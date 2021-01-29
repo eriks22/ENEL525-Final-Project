@@ -75,24 +75,23 @@ affect the weights less.
 
 **Input data and corresponding value ranges:**
 
-```
-Input Description Data type Input Values
-1 age (percentile group) Continuous [ 0 , 1 ]
-2 hematocrit Continuous (- 1 , 1 )
-3 haemoglobin Continuous (- 1 , 1 )
-4 platelets Continuous (- 1 , 1 )
-5 mean platelet volume (MPV), Continuous (- 1 , 1 )
-6 red blood cells (RBC), Continuous (- 1 , 1 )
-7 lymphocytes Continuous (- 1 , 1 )
-8 mean corpuscular haemoglobin concentration (MCHC) Continuous (- 1 , 1 )
-9 leukocytes Continuous (- 1 , 1 )
-10 basophils Continuous (- 1 , 1 )
-11 mean corpuscular haemoglobin (MCH) Continuous (- 1 , 1 )
-12 eosinophils Continuous (- 1 , 1 )
-13 mean corpuscular volume (MCV) Continuous (- 1 , 1 )
-14 monocytes Continuous (- 1 , 1 )
-15 red blood cell distribution width (RBCDW). Continuous (- 1 , 1 )
-```
+Input | Description | Data type | Input | Values
+------------ | ------------- | ------------- | ------------- | -------------
+1 | age (percentile group) | Continuous | \[ 0 , 1 \]
+2 | hematocrit | Continuous | (- 1 , 1 )
+3 | haemoglobin | Continuous | (- 1 , 1 )
+4 | platelets | Continuous | (- 1 , 1 )
+5 | mean platelet volume (MPV), | Continuous | (- 1 , 1 )
+6 | red blood cells (RBC), | Continuous | (- 1 , 1 )
+7 | lymphocytes | Continuous | (- 1 , 1 )
+8 | mean corpuscular haemoglobin concentration (MCHC) | Continuous | (- 1 , 1 )
+9 | leukocytes | Continuous | (- 1 , 1 )
+10 | basophils | Continuous | (- 1 , 1 )
+11 | mean corpuscular haemoglobin (MCH) | Continuous | (- 1 , 1 )
+12 | eosinophils | Continuous | (- 1 , 1 )
+13 | mean corpuscular volume (MCV) | Continuous | (- 1 , 1 )
+14 | monocytes | Continuous | (- 1 , 1 )
+15 | red blood cell distribution width (RBCDW). | Continuous | (- 1 , 1 )
 
 The target of the project is to correctly identify positive and negative
 cases, so the output of the network relies on a binary decision. As
@@ -139,12 +138,9 @@ for the hidden and output layers as it allows a
 
 **Formula 1: Hyperbolic tangent sigmoid transfer function:**
 
-$$\text{tansig}\left( n \right) = \ \frac{2}{(1 %2B e^{- 2n})} - 1$$
-<img src="https://render.githubusercontent.com/render/math?math=tansig = \ \frac{2}{(1 + e^{- 2n})} - 1">
+<img \Large src="https://render.githubusercontent.com/render/math?math=tansig = \ \frac{2}{(1 + e^{- 2n})} - 1">
 
-$$\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})$$
-
-<img src="https://render.githubusercontent.com/render/math?math=\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
+<img \Large src="https://render.githubusercontent.com/render/math?math=\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
 
 Network diagrams:
 -----------------
