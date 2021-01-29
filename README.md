@@ -21,7 +21,7 @@ the data given is has been presented in follows in Table 1.
 
 **Table 1: Blood Count Information Input Data**
 
-![](media/image1.emf){width="6.5in" height="4.548611111111111in"}
+!(media/image1.emf){width="6.5in" height="4.548611111111111in"}
 
 The task at hand is to design, configure, train, and test a machine
 learning architecture that can accurately and reliably predict positive
