@@ -1,6 +1,6 @@
 **ENEL 525 F2020 -- Final Project**
 
-**Erik Skoronski**
+**Erik S**
 
 **December 16th, 2020**
 
