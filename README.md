@@ -1,6 +1,7 @@
 # ENEL525-Final-Project
 Final Project for ENEL525 Machine Learning for Engineers taken during Fall 2020
 
+<<<<<<< HEAD
 # ENEL 525 F2020 – Final Project
 
 # Erik Skoronski
@@ -328,3 +329,6 @@ Note: Chart above only shows 2nd neuron in the output layer as output neurons ar
 ### MATLAB code: (attached as .m file)
 
 
+=======
+Made using MATLAB and the Deep Learning Toolbox
+>>>>>>> 53f0793f76979cd880927e9fc14a5f3786c9e13c
