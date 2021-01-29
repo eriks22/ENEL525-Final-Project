@@ -157,8 +157,8 @@ Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{e} = error">
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{t}{𝑎⃑} = output">
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{𝑒⃑} = error">
 Where $\overset{⃑}{a} = output$, $\overset{⃑}{e} = error$,
 $\overset{⃑}{b} = bias$, and $\alpha = learning\ rate$
 
