@@ -139,7 +139,7 @@ for the hidden and output layers as it allows a
 
 **Formula 1: Hyperbolic tangent sigmoid transfer function:**
 
-$$\text{tansig}\left( n \right) = \ \frac{2}{(1 + e^{- 2n})} - 1$$
+$$\text{tansig}\left( n \right) = \ \frac{2}{(1 %2B e^{- 2n})} - 1$$
 <img src="https://render.githubusercontent.com/render/math?math=tansig = \ \frac{2}{(1 + e^{- 2n})} - 1">
 
 $$\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})$$
@@ -158,13 +158,13 @@ height="3.388888888888889in"}
 **Figure 2: Hidden Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image5.tiff){width="1.7916666666666667in"
+generated](media/image5.png){width="1.7916666666666667in"
 height="1.0833333333333333in"}
 
 **Figure 3: Output Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image6.tiff){width="1.6666666666666667in"
+generated](media/image6.png){width="1.6666666666666667in"
 height="1.0416666666666667in"}
 
 The training was done by using the training data to update the weights
