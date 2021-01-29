@@ -90,9 +90,8 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-text | Output Layer |  Neuron
+  | Neuron 1 |  Neuron 2
 ------------ | ------------- | -------------
-text | 1 | 2
 Positive | 0 | 1
 Negative | 1 | 0
 
@@ -136,20 +135,17 @@ Network diagrams:
 **Figure 1: Neural Network Diagram**
 
 ![Diagram Description automatically
-generated](media/image4.png){width="5.444444444444445in"
-height="3.388888888888889in"}
+generated](media/image4.png)
 
 **Figure 2: Hidden Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image5.png){width="1.7916666666666667in"
-height="1.0833333333333333in"}
+generated](media/image5.png)
 
 **Figure 3: Output Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image6.png){width="1.6666666666666667in"
-height="1.0416666666666667in"}
+generated](media/image6.png)
 
 The training was done by using the training data to update the weights
 and biases.
@@ -157,11 +153,11 @@ and biases.
 Derivation of Backpropagation Learning Rule
 -------------------------------------------
 
-Backpropagation derivation (inspired by Chapter 11 of the textbook
-\[1\]:
+Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{a} = output$, $\overset{⃑}{e} = error">
 Where $\overset{⃑}{a} = output$, $\overset{⃑}{e} = error$,
 $\overset{⃑}{b} = bias$, and $\alpha = learning\ rate$
 
