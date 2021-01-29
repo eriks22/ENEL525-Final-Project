@@ -24,7 +24,6 @@ the data given is has been presented in follows in Table 1.
 Column | Description | Data type
 ------------ | ------------- | -------------
 0 | Row index (corresponding to the original file). The samples containing NaN/missing data are removed, so there are 598 individuals with full blood counts. | Integer
-
 1 | age (percentile group) | Continuous
 2 | rt-PCR SARS-CoV- 2 test | Discrete Class [Positive, Negative]
 3 | hematocrit | Continuous
