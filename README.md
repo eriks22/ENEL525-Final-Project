@@ -157,18 +157,14 @@ Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{t}{𝑎⃑} = output">
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{𝑒⃑} = error">
-Where $\overset{⃑}{a} = output$, $\overset{⃑}{e} = error$,
-$\overset{⃑}{b} = bias$, and $\alpha = learning\ rate$
+Where <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = error">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{b} = bias">, and <img src="https://render.githubusercontent.com/render/math?math=\Large \alpha = learning\ rate">
 
 Step 1: Propagate inputs through the network
+<img src="https://render.githubusercontent.com/render/math?math=\Large {\overset{}{a}}^{m + 1} = tansig\left( {\overset{}{W}}^{m + 1}p + {\overset{}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ ">
 
-${\overset{⃑}{a}}^{m + 1} = tansig\left( {\overset{⃑}{W}}^{m + 1}p + {\overset{⃑}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ $
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = {\overset{}{a}}^{L}">
 
-$$\overset{⃑}{a} = {\overset{⃑}{a}}^{L}$$
-
-$$\overset{⃑}{e} = \ t - a$$
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = \ t - a">
 
 Step 2: Back propagate the sensitivities
 
