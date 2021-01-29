@@ -11,11 +11,7 @@ Final Project for ENEL525 Machine Learning for Engineers taken during Fall 2020
 
 # Introduction
 
-### The COVID-19 pandemic has defined an unprecedented set of problems for
-
-### researchers and scientists to solve. In this array of problems, the task of testing and
-
-### correctly identifying positive and negative cases of COVID-19 has been of utmost
+### The COVID-19 pandemic has defined an unprecedented set of problems for researchers and scientists to solve. In this array of problems, the task of testing and correctly identifying positive and negative cases of COVID-19 has been of utmost
 
 ### importance.
 
