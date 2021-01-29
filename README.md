@@ -21,7 +21,35 @@ the data given is has been presented in follows in Table 1.
 
 **Table 1: Blood Count Information Input Data**
 
-!(media/image1.emf){:width="6.5in" height="4.548611111111111in"}
+
+```
+Column Description Data type
+0 Row index (corresponding to the original file). The
+samples containing NaN/missing data are removed, so
+there are 598 individuals with full blood counts.
+```
+```
+Integer
+```
+```
+1 age (percentile group) Continuous
+2 rt-PCR SARS-CoV- 2 test Discrete Class
+[Positive, Negative]
+3 hematocrit Continuous
+4 haemoglobin Continuous
+5 platelets Continuous
+6 mean platelet volume (MPV), Continuous
+7 red blood cells (RBC), Continuous
+8 lymphocytes Continuous
+9 mean corpuscular haemoglobin concentration (MCHC) Continuous
+10 leukocytes Continuous
+11 basophils Continuous
+12 mean corpuscular haemoglobin (MCH) Continuous
+13 eosinophils Continuous
+14 mean corpuscular volume (MCV) Continuous
+15 monocytes Continuous
+16 red blood cell distribution width (RBCDW). Continuous
+```
 
 
 The task at hand is to design, configure, train, and test a machine
@@ -47,7 +75,24 @@ affect the weights less.
 
 **Input data and corresponding value ranges:**
 
-![](media/image2.emf){width="6.5in" height="3.0166666666666666in"}
+```
+Input Description Data type Input Values
+1 age (percentile group) Continuous [ 0 , 1 ]
+2 hematocrit Continuous (- 1 , 1 )
+3 haemoglobin Continuous (- 1 , 1 )
+4 platelets Continuous (- 1 , 1 )
+5 mean platelet volume (MPV), Continuous (- 1 , 1 )
+6 red blood cells (RBC), Continuous (- 1 , 1 )
+7 lymphocytes Continuous (- 1 , 1 )
+8 mean corpuscular haemoglobin concentration (MCHC) Continuous (- 1 , 1 )
+9 leukocytes Continuous (- 1 , 1 )
+10 basophils Continuous (- 1 , 1 )
+11 mean corpuscular haemoglobin (MCH) Continuous (- 1 , 1 )
+12 eosinophils Continuous (- 1 , 1 )
+13 mean corpuscular volume (MCV) Continuous (- 1 , 1 )
+14 monocytes Continuous (- 1 , 1 )
+15 red blood cell distribution width (RBCDW). Continuous (- 1 , 1 )
+```
 
 The target of the project is to correctly identify positive and negative
 cases, so the output of the network relies on a binary decision. As
@@ -57,8 +102,12 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-![](media/image3.emf){width="2.7222222222222223in"
-height="0.9027777777777778in"}
+```
+Output Layer Neuron
+1 2
+Positive 0 1
+Negative 1 0
+```
 
 Network Design
 --------------
@@ -95,13 +144,15 @@ $$\text{tansig}\left( n \right) = \ \frac{2}{(1 + e^{- 2n})} - 1$$
 
 $$\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})$$
 
+<img src="https://render.githubusercontent.com/render/math?math=\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
+
 Network diagrams:
 -----------------
 
 **Figure 1: Neural Network Diagram**
 
 ![Diagram Description automatically
-generated](media/image4.tiff){width="5.444444444444445in"
+generated](media/image4.png){width="5.444444444444445in"
 height="3.388888888888889in"}
 
 **Figure 2: Hidden Layer Neuron**
@@ -175,38 +226,18 @@ Final results:
 
 **Figure 4: Mean Squared Error at each Iteration**
 
-![Chart Description automatically
-generated](media/image7.png){width="5.384933289588801in"
-height="2.3663363954505687in"}
+![](media/image7.png)
 
 **Figure 5: All Output vs Testing and Training Data**
 
-![A picture containing diagram Description automatically
-generated](media/image8.png){width="4.3480621172353455in"
-height="1.5748031496062993in"}
-
-![](media/image8.png){:height="1.5748031496062993in" width="4.3480621172353455in"}
-
-![A picture containing diagram Description automatically
-generated](media/image8.png){width="0.2475929571303587in"
-height="1.5748031496062993in"}![A picture containing diagram Description
-automatically generated](media/image8.png){width="4.1943908573928255in"
-height="1.5748031496062993in"}
-
-![A picture containing diagram Description automatically
-generated](media/image8.png){width="0.2475929571303587in"
-height="1.5748031496062993in"}![A picture containing diagram Description
-automatically generated](media/image8.png){width="4.282087707786527in"
+![](media/image8.png){width="4.3480621172353455in"
 height="1.5748031496062993in"}
 
 **Figure 6: Output vs. Test Data**
 
-![Chart, histogram Description automatically
-generated](media/image9.png){width="3.3472222222222223in"
-height="2.6805555555555554in"}
+![](media/image9.png)
 
-*Note: Chart above only shows 2^nd^ neuron in the output layer as output
-neurons are highly inversely-correlated *
+*Note: Chart above only shows 2nd neuron in the output layer as output neurons are highly inversely-correlated*
 
 Conclusion
 ==========
