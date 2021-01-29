@@ -1,12 +1,10 @@
-# ENEL525-Final-Project
 Final Project for ENEL525 Machine Learning for Engineers taken during Fall 2020
 
-<<<<<<< HEAD
 # ENEL 525 F2020 – Final Project
 
-# Erik Skoronski
+## Erik Skoronski
 
-# December 16 th, 2020
+## December 16 th, 2020
 
 
 # Introduction
