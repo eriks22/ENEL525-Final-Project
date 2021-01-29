@@ -164,7 +164,7 @@ $\overset{⃑}{b} = bias$, and $\alpha = learning\ rate$
 
 Step 1: Propagate inputs through the network
 
-$${\overset{⃑}{a}}^{m + 1} = tansig\left( {\overset{⃑}{W}}^{m + 1}p + {\overset{⃑}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ $$
+${\overset{⃑}{a}}^{m + 1} = tansig\left( {\overset{⃑}{W}}^{m + 1}p + {\overset{⃑}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ $
 
 $$\overset{⃑}{a} = {\overset{⃑}{a}}^{L}$$
 
