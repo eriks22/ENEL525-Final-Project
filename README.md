@@ -1,10 +1,6 @@
 Final Project for ENEL525 Machine Learning for Engineers taken during Fall 2020
-
-# ENEL 525 F2020 – Final Project
-
 ## Erik Skoronski
-
-## December 16 th, 2020
+## December 16th, 2020
 
 
 # Introduction
@@ -207,48 +203,19 @@ Note: Chart above only shows 2nd neuron in the output layer as output neurons ar
 
 # Conclusion
 
-### The mean-squared-error of the neural network with the training data was able to be
+### The mean-squared-error of the neural network with the training data was able to be reduced down to 0.02, however, the mean-squared-error of the test data was 0.0343. Based on the output data (figure 6), the network cannot correctly distinguish between positive and negative results.
 
-### reduced down to 0.02, however, the mean-squared-error of the test data was 0.0343.
+### This may be mainly due to the training data. As there is a different proportion of positive to negative cases in the network, the network is mainly trained to identify negative cases. If more data were available, or if potentially alternative training methods were explored, then potentially the error could be reduced.
 
-### Based on the output data (figure 6), the network cannot correctly distinguish between
+### As well, the use of backpropagation may have been inappropriate for this task. Other methods, such as Decision Tree or Random Forest modelling [2] may be more suitable for the problem. These methods, however, were beyond the scope of this course.
 
-### positive and negative results.
-
-### This may be mainly due to the training data. As there is a different proportion of positive
-
-### to negative cases in the network, the network is mainly trained to identify negative
-
-### cases. If more data were available, or if potentially alternative training methods were
-
-### explored, then potentially the error could be reduced.
-
-### As well, the use of backpropagation may have been inappropriate for this task. Other
-
-### methods, such as Decision Tree or Random Forest modelling [2] may be more suitable
-
-### for the problem. These methods, however, were beyond the scope of this course.
-
-### Regardless of the results of the network, valuable skills were learned about the real-
-
-### world application of machine learning techniques. As well, I gained valuable knowledge
-
-### about the importance of the design of neural network architecture for machine learning.
+### Regardless of the results of the network, valuable skills were learned about the real- world application of machine learning techniques. As well, I gained valuable knowledge about the importance of the design of neural network architecture for machine learning.
 
 
 # References
 
-### [1] Hagan, M. T., Demuth, H. B., Beale, M. H., & Jesús, O. (2014). Neural network
-
-### design (2nd ed.). Stillwater, Oklahoma: Martin Hagan.
-
-### [2] Brinati, D., Campagner, A., Ferrari, D., Locatelli, M., Banfi, G., & Cabitza, F. (2020).
-
-### Detection of COVID-19 Infection from Routine Blood Exams with Machine Learning: A
-
-### Feasibility Study. Journal of medical systems, 44(8), 135.
-
-### https://doi.org/10.1007/s10916- 020 - 01597 - 4
+### [1] Hagan, M. T., Demuth, H. B., Beale, M. H., & Jesús, O. (2014). Neural network design (2nd ed.). Stillwater, Oklahoma: Martin Hagan.
+### [2] Brinati, D., Campagner, A., Ferrari, D., Locatelli, M., Banfi, G., & Cabitza, F. (2020). Detection of COVID-19 Infection from Routine Blood Exams with Machine Learning: A Feasibility Study. Journal of medical systems, 44(8), 135. https://doi.org/10.1007/s10916- 020 - 01597 - 4
 
 
 # Appendix
