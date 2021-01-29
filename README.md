@@ -21,36 +21,25 @@ the data given is has been presented in follows in Table 1.
 
 **Table 1: Blood Count Information Input Data**
 
-
-```
-Column Description Data type
-0 Row index (corresponding to the original file). The
-samples containing NaN/missing data are removed, so
-there are 598 individuals with full blood counts.
-```
-```
-Integer
-```
-```
-1 age (percentile group) Continuous
-2 rt-PCR SARS-CoV- 2 test Discrete Class
-[Positive, Negative]
-3 hematocrit Continuous
-4 haemoglobin Continuous
-5 platelets Continuous
-6 mean platelet volume (MPV), Continuous
-7 red blood cells (RBC), Continuous
-8 lymphocytes Continuous
-9 mean corpuscular haemoglobin concentration (MCHC) Continuous
-10 leukocytes Continuous
-11 basophils Continuous
-12 mean corpuscular haemoglobin (MCH) Continuous
-13 eosinophils Continuous
-14 mean corpuscular volume (MCV) Continuous
-15 monocytes Continuous
-16 red blood cell distribution width (RBCDW). Continuous
-```
-
+Column | Description | Data type
+------------ | ------------- | -------------
+0 | Row index (corresponding to the original file). The samples containing NaN/missing data are removed, so there are 598 individuals with full blood counts. | Integer
+1 | age (percentile group) | Continuous
+2 | rt-PCR SARS-CoV- 2 test | Discrete Class [Positive, Negative]
+3 | hematocrit | Continuous
+4 | haemoglobin | Continuous
+5 | platelets | Continuous
+6 | mean platelet volume (MPV), | Continuous
+7 | red blood cells (RBC), | Continuous
+8 | lymphocytes | Continuous
+9 | mean corpuscular haemoglobin concentration (MCHC) | Continuous
+10 | leukocytes | Continuous
+11 | basophils | Continuous
+12 | mean corpuscular haemoglobin (MCH) | Continuous
+13 | eosinophils | Continuous
+14 | mean corpuscular volume (MCV) | Continuous
+15 | monocytes | Continuous
+16 | red blood cell distribution width (RBCDW). | Continuous
 
 The task at hand is to design, configure, train, and test a machine
 learning architecture that can accurately and reliably predict positive
@@ -75,24 +64,23 @@ affect the weights less.
 
 **Input data and corresponding value ranges:**
 
-```
-Input Description Data type Input Values
-1 age (percentile group) Continuous [ 0 , 1 ]
-2 hematocrit Continuous (- 1 , 1 )
-3 haemoglobin Continuous (- 1 , 1 )
-4 platelets Continuous (- 1 , 1 )
-5 mean platelet volume (MPV), Continuous (- 1 , 1 )
-6 red blood cells (RBC), Continuous (- 1 , 1 )
-7 lymphocytes Continuous (- 1 , 1 )
-8 mean corpuscular haemoglobin concentration (MCHC) Continuous (- 1 , 1 )
-9 leukocytes Continuous (- 1 , 1 )
-10 basophils Continuous (- 1 , 1 )
-11 mean corpuscular haemoglobin (MCH) Continuous (- 1 , 1 )
-12 eosinophils Continuous (- 1 , 1 )
-13 mean corpuscular volume (MCV) Continuous (- 1 , 1 )
-14 monocytes Continuous (- 1 , 1 )
-15 red blood cell distribution width (RBCDW). Continuous (- 1 , 1 )
-```
+Input | Description | Data type | Input Values
+------------ | ------------- | ------------- | -------------
+1 | age (percentile group) | Continuous | \[ 0 , 1 \]
+2 | hematocrit | Continuous | (- 1 , 1 )
+3 | haemoglobin | Continuous | (- 1 , 1 )
+4 | platelets | Continuous | (- 1 , 1 )
+5 | mean platelet volume (MPV), | Continuous | (- 1 , 1 )
+6 | red blood cells (RBC), | Continuous | (- 1 , 1 )
+7 | lymphocytes | Continuous | (- 1 , 1 )
+8 | mean corpuscular haemoglobin concentration (MCHC) | Continuous | (- 1 , 1 )
+9 | leukocytes | Continuous | (- 1 , 1 )
+10 | basophils | Continuous | (- 1 , 1 )
+11 | mean corpuscular haemoglobin (MCH) | Continuous | (- 1 , 1 )
+12 | eosinophils | Continuous | (- 1 , 1 )
+13 | mean corpuscular volume (MCV) | Continuous | (- 1 , 1 )
+14 | monocytes | Continuous | (- 1 , 1 )
+15 | red blood cell distribution width (RBCDW). | Continuous | (- 1 , 1 )
 
 The target of the project is to correctly identify positive and negative
 cases, so the output of the network relies on a binary decision. As
@@ -102,12 +90,10 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-```
-Output Layer Neuron
-1 2
-Positive 0 1
-Negative 1 0
-```
+  | Neuron 1 |  Neuron 2
+------------ | ------------- | -------------
+Positive | 0 | 1
+Negative | 1 | 0
 
 Network Design
 --------------
@@ -139,12 +125,9 @@ for the hidden and output layers as it allows a
 
 **Formula 1: Hyperbolic tangent sigmoid transfer function:**
 
-$$\text{tansig}\left( n \right) = \ \frac{2}{(1 %2B e^{- 2n})} - 1$$
-<img src="https://render.githubusercontent.com/render/math?math=tansig = \ \frac{2}{(1 + e^{- 2n})} - 1">
+<img src="https://render.githubusercontent.com/render/math?math=\Large tansig = \ \frac{2}{(1 %2B e^{- 2n})} - 1">
 
-$$\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})$$
-
-<img src="https://render.githubusercontent.com/render/math?math=\frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
+<img src="https://render.githubusercontent.com/render/math?math=\Large \frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
 
 Network diagrams:
 -----------------
@@ -152,20 +135,17 @@ Network diagrams:
 **Figure 1: Neural Network Diagram**
 
 ![Diagram Description automatically
-generated](media/image4.png){width="5.444444444444445in"
-height="3.388888888888889in"}
+generated](media/image4.png)
 
 **Figure 2: Hidden Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image5.png){width="1.7916666666666667in"
-height="1.0833333333333333in"}
+generated](media/image5.png)
 
 **Figure 3: Output Layer Neuron**
 
 ![Diagram Description automatically
-generated](media/image6.png){width="1.6666666666666667in"
-height="1.0416666666666667in"}
+generated](media/image6.png)
 
 The training was done by using the training data to update the weights
 and biases.
@@ -173,21 +153,18 @@ and biases.
 Derivation of Backpropagation Learning Rule
 -------------------------------------------
 
-Backpropagation derivation (inspired by Chapter 11 of the textbook
-\[1\]:
+Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
-Where $\overset{⃑}{a} = output$, $\overset{⃑}{e} = error$,
-$\overset{⃑}{b} = bias$, and $\alpha = learning\ rate$
+Where <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = error">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{b} = bias">, and <img src="https://render.githubusercontent.com/render/math?math=\Large \alpha = learning\ rate">
 
 Step 1: Propagate inputs through the network
+<img src="https://render.githubusercontent.com/render/math?math=\Large {\overset{}{a}}^{m + 1} = tansig\left( {\overset{}{W}}^{m + 1}p + {\overset{}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ ">
 
-$${\overset{⃑}{a}}^{m + 1} = tansig\left( {\overset{⃑}{W}}^{m + 1}p + {\overset{⃑}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ $$
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{\char"20D7}{a} = {\overset{}{a}}^{L}">
 
-$$\overset{⃑}{a} = {\overset{⃑}{a}}^{L}$$
-
-$$\overset{⃑}{e} = \ t - a$$
+<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = \ t - a">
 
 Step 2: Back propagate the sensitivities
 
