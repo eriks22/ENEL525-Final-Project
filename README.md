@@ -126,7 +126,7 @@ for the hidden and output layers as it allows a
 
 **Formula 1: Hyperbolic tangent sigmoid transfer function:**
 
-<img src="https://render.githubusercontent.com/render/math?math=\Large tansig = \ \frac{2}{(1 + e^{- 2n})} - 1">
+<img src="https://render.githubusercontent.com/render/math?math=\Large tansig = \ \frac{2}{(1 %2B e^{- 2n})} - 1">
 
 <img src="https://render.githubusercontent.com/render/math?math=\Large \frac{d}{\text{dx}}\text{tansig}\left( n \right) = \ f^{'} = (1 - n^{2})">
 
