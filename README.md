@@ -21,36 +21,26 @@ the data given is has been presented in follows in Table 1.
 
 **Table 1: Blood Count Information Input Data**
 
+Column | Description | Data type
+------------ | ------------- | -------------
+0 | Row index (corresponding to the original file). The samples containing NaN/missing data are removed, so there are 598 individuals with full blood counts. | Integer
 
-```
-Column Description Data type
-0 Row index (corresponding to the original file). The
-samples containing NaN/missing data are removed, so
-there are 598 individuals with full blood counts.
-```
-```
-Integer
-```
-```
-1 age (percentile group) Continuous
-2 rt-PCR SARS-CoV- 2 test Discrete Class
-[Positive, Negative]
-3 hematocrit Continuous
-4 haemoglobin Continuous
-5 platelets Continuous
-6 mean platelet volume (MPV), Continuous
-7 red blood cells (RBC), Continuous
-8 lymphocytes Continuous
-9 mean corpuscular haemoglobin concentration (MCHC) Continuous
-10 leukocytes Continuous
-11 basophils Continuous
-12 mean corpuscular haemoglobin (MCH) Continuous
-13 eosinophils Continuous
-14 mean corpuscular volume (MCV) Continuous
-15 monocytes Continuous
-16 red blood cell distribution width (RBCDW). Continuous
-```
-
+1 | age (percentile group) | Continuous
+2 | rt-PCR SARS-CoV- 2 test | Discrete Class [Positive, Negative]
+3 | hematocrit | Continuous
+4 | haemoglobin | Continuous
+5 | platelets | Continuous
+6 | mean platelet volume (MPV), | Continuous
+7 | red blood cells (RBC), | Continuous
+8 | lymphocytes | Continuous
+9 | mean corpuscular haemoglobin concentration (MCHC) | Continuous
+10 | leukocytes | Continuous
+11 | basophils | Continuous
+12 | mean corpuscular haemoglobin (MCH) | Continuous
+13 | eosinophils | Continuous
+14 | mean corpuscular volume (MCV) | Continuous
+15 | monocytes | Continuous
+16 | red blood cell distribution width (RBCDW). | Continuous
 
 The task at hand is to design, configure, train, and test a machine
 learning architecture that can accurately and reliably predict positive
@@ -75,8 +65,8 @@ affect the weights less.
 
 **Input data and corresponding value ranges:**
 
-Input | Description | Data type | Input | Values
------------- | ------------- | ------------- | ------------- | -------------
+Input | Description | Data type | Input Values
+------------ | ------------- | ------------- | -------------
 1 | age (percentile group) | Continuous | \[ 0 , 1 \]
 2 | hematocrit | Continuous | (- 1 , 1 )
 3 | haemoglobin | Continuous | (- 1 , 1 )
