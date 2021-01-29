@@ -90,12 +90,11 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-```
-Output Layer Neuron
-1 2
-Positive 0 1
-Negative 1 0
-```
+ | Output Layer |  Neuron
+------------ | ------------- | -------------
+ | 1 | 2
+Positive | 0 | 1
+Negative | 1 | 0
 
 Network Design
 --------------
