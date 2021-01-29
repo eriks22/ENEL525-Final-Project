@@ -185,7 +185,7 @@ height="2.3663363954505687in"}
 generated](media/image8.png){width="4.3480621172353455in"
 height="1.5748031496062993in"}
 
-!(media/image8.png){:height="1.5748031496062993in" width="4.3480621172353455in"}
+![](media/image8.png){:height="1.5748031496062993in" width="4.3480621172353455in"}
 
 ![A picture containing diagram Description automatically
 generated](media/image8.png){width="0.2475929571303587in"
