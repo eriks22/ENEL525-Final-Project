@@ -90,7 +90,7 @@ or negative) so two neurons in the output layer were used.
 
 The output layer could then be interpreted as such:
 
-  | Neuron 1 |  Neuron 2
+. | Neuron 1 |  Neuron 2
 ------------ | ------------- | -------------
 Positive | 0 | 1
 Negative | 1 | 0
@@ -134,18 +134,15 @@ Network diagrams:
 
 **Figure 1: Neural Network Diagram**
 
-![Diagram Description automatically
-generated](media/image4.png)
+![](media/image4.png)
 
 **Figure 2: Hidden Layer Neuron**
 
-![Diagram Description automatically
-generated](media/image5.png)
+![](media/image5.png)
 
 **Figure 3: Output Layer Neuron**
 
-![Diagram Description automatically
-generated](media/image6.png)
+![](media/image6.png)
 
 The training was done by using the training data to update the weights
 and biases.
@@ -157,26 +154,18 @@ Backpropagation derivation (inspired by Chapter 11 of the textbook \[1\]:
 
 The backpropagation algorithm includes the three following steps:
 
-Where <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = error">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{b} = bias">, and <img src="https://render.githubusercontent.com/render/math?math=\Large \alpha = learning\ rate">
+Where ![](media/variables.png)
 
 Step 1: Propagate inputs through the network
-<img src="https://render.githubusercontent.com/render/math?math=\Large {\overset{}{a}}^{m + 1} = tansig\left( {\overset{}{W}}^{m + 1}p + {\overset{}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ ">
-
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{\char"20D7}{a} = {\overset{}{a}}^{L}">
-
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = \ t - a">
+![](media/formula1.png)
 
 Step 2: Back propagate the sensitivities
 
-$$\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{L}} = - 2F^{'L}({\overset{⃑}{n}}^{L})\overset{⃑}{e}$$
-
-$$\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}} = F^{'m}\left( {\overset{⃑}{n}}^{m} \right)\left( {\overset{⃑}{W}}^{m + 1} \right)\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m + 1}}\text{\ \ }\mathrm{\text{for\ }}m = L - 1,\ L - 2,\ \ldots,\ 2,\ 1\ $$
+![](media/formula2.png)
 
 Step 3: Update the weights and biases
 
-$${\overset{⃑}{W}}^{m}\left( k + 1 \right) = {\overset{⃑}{W}}^{m}\left( k \right) - \alpha\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}}({\overset{⃑}{a}}^{m - 1})$$
-
-$${\overset{⃑}{b}}^{m}\left( k + 1 \right) = {\overset{⃑}{b}}^{m}\left( k \right) - \alpha\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}}$$
+![](media/formula3.png)
 
 Using these equations we can implement the back-propagation algorithm
 used for this project.
@@ -207,8 +196,7 @@ Final results:
 
 **Figure 5: All Output vs Testing and Training Data**
 
-![](media/image8.png){width="4.3480621172353455in"
-height="1.5748031496062993in"}
+![](media/image8.png)
 
 **Figure 6: Output vs. Test Data**
 
@@ -232,7 +220,7 @@ potentially the error could be reduced.
 
 As well, the use of backpropagation may have been inappropriate for this
 task. Other methods, such as Decision Tree or Random Forest modelling
-^\[2\]^ may be more suitable for the problem. These methods, however,
+\[2\] may be more suitable for the problem. These methods, however,
 were beyond the scope of this course.
 
 Regardless of the results of the network, valuable skills were learned
