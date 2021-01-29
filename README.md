@@ -134,18 +134,15 @@ Network diagrams:
 
 **Figure 1: Neural Network Diagram**
 
-![Diagram Description automatically
-generated](media/image4.png)
+![](media/image4.png)
 
 **Figure 2: Hidden Layer Neuron**
 
-![Diagram Description automatically
-generated](media/image5.png)
+![](media/image5.png)
 
 **Figure 3: Output Layer Neuron**
 
-![Diagram Description automatically
-generated](media/image6.png)
+![](media/image6.png)
 
 The training was done by using the training data to update the weights
 and biases.
@@ -160,23 +157,15 @@ The backpropagation algorithm includes the three following steps:
 Where <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{a} = output">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = error">, <img src="https://render.githubusercontent.com/render/math?math=\Large \overset{⃑}{b} = bias">, and <img src="https://render.githubusercontent.com/render/math?math=\Large \alpha = learning\ rate">
 
 Step 1: Propagate inputs through the network
-<img src="https://render.githubusercontent.com/render/math?math=\Large {\overset{}{a}}^{m + 1} = tansig\left( {\overset{}{W}}^{m + 1}p + {\overset{}{b}}^{m + 1} \right)\text{\ \ \ \ }\mathrm{\text{for\ }}m = 0,\ 1,\ 2,\ \ldots,\ L - 1\ ">
-
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{\char"20D7}{a} = {\overset{}{a}}^{L}">
-
-<img src="https://render.githubusercontent.com/render/math?math=\Large \overset{}{e} = \ t - a">
+![](media/formula1.png)
 
 Step 2: Back propagate the sensitivities
 
-$$\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{L}} = - 2F^{'L}({\overset{⃑}{n}}^{L})\overset{⃑}{e}$$
-
-$$\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}} = F^{'m}\left( {\overset{⃑}{n}}^{m} \right)\left( {\overset{⃑}{W}}^{m + 1} \right)\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m + 1}}\text{\ \ }\mathrm{\text{for\ }}m = L - 1,\ L - 2,\ \ldots,\ 2,\ 1\ $$
+![](media/formula2.png)
 
 Step 3: Update the weights and biases
 
-$${\overset{⃑}{W}}^{m}\left( k + 1 \right) = {\overset{⃑}{W}}^{m}\left( k \right) - \alpha\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}}({\overset{⃑}{a}}^{m - 1})$$
-
-$${\overset{⃑}{b}}^{m}\left( k + 1 \right) = {\overset{⃑}{b}}^{m}\left( k \right) - \alpha\frac{\partial\widehat{F}}{{\partial\overset{⃑}{n}}^{m}}$$
+![](media/formula3.png)
 
 Using these equations we can implement the back-propagation algorithm
 used for this project.
